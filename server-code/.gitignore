@@ -1,0 +1,10 @@
+# package directories
+node_modules
+jspm_packages
+middlewares/.DS_Store
+services/.DS_Store
+utils/.DS_Store
+lambdas/.DS_Store
+.DS_Store
+# Serverless directories
+.serverless

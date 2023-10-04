@@ -1,0 +1,18 @@
+{
+  "name": "server-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "serverless offline",
+    "deploy": "serverless deploy"
+  },
+  "keywords": [],
+  "author": "Sumit Baghel",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1469.0",
+    "serverless-offline": "^13.1.2"
+  }
+}
