@@ -37,23 +37,17 @@ plugins:
 
 functions:
   firstLambda:
-    handler: lambda-functions/index.fistLambda
+    handler: lambdas/index.firstLambda
+    iamRoleStatements:
+      - Effect: deny
+        Action:
+          - logs:CreateLogGroup
+          - logs:CreateLogStream
+          - logs:PutLogEvents
+        Resource:
+          - arn:aws:logs:*:*:*
     events:
       - http: 
+          method: GET
           path: /api/v1/firstLambda
-          method: post
-          cors: true
-  secondLambda:
-    handler: lambda-functions/index.secondLambda
-    events:
-      - http: 
-          path: /api/v1/secondLambda
-          method: post
-          cors: true
-  thirdLambda:
-    handler: lambda-functions/index.thirdLambda
-    events:
-      - http: 
-          path: /api/v1/thirdLambda
-          method: post
           cors: true
